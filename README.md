@@ -17,7 +17,9 @@ $ pip install grpcio-tools
 
 Use the following command to generate the Python code for the protobuf:
 ```
-$ python -m grpc_tools.protoc -Isrc/main/proto --python_out=. --grpc_python_out=. src/main/proto/demo.proto
+$ mkdir python_client
+$ cd python_client
+$ python -m grpc_tools.protoc -I../src/main/proto --python_out=. --grpc_python_out=. ../src/main/proto/demo.proto
 ```
 
 Run this to connect to the server and make a request:
